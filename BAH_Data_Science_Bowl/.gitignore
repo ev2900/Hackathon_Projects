@@ -1,0 +1,10 @@
+env/
+Cmake_intermediary.txt
+OpenCV_Caveats.txt
+subpixel5.png
+ImageSets/FaceDetect/
+ImageSets/Processed_0to10/
+*/*~
+*~
+Scripts/Vectors
+*/*.pyc

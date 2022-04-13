@@ -1,0 +1,17 @@
+Installation Requirements:
+- Mac OS X, with some steps also pertinent to Linux:
+	1. http://shanshanchen.com/2013/05/29/install-numpy-scipy-scikit-learn-on-mac-os-x-for-data-miners/
+	2. https://pythonhosted.org/nolearn/
+	3. http://www.dabapps.com/blog/introduction-to-pip-and-virtualenv-python/
+	4. http://www.pyimagesearch.com/2015/06/15/install-opencv-3-0-and-python-2-7-on-osx/
+	
+
+Coursera Mooc on Nural Networks
+
+	https://class.coursera.org/neuralnets-2012-001/lecture
+
+Python & Deep Learning 
+
+	http://www.pyimagesearch.com/2014/09/22/getting-started-deep-learning-python/
+	https://www.youtube.com/watch?v=E9ZPD_T639c
+	

@@ -1,0 +1,112 @@
+"""
+These are the commands I followed (on Mac - El Capitan) to install stuff
+Probably fairly similar for Linux (Ubuntu) distros.
+
+Websites I visited to install ML-relevant stuff, in order:
+
+http://shanshanchen.com/2013/05/29/install-numpy-scipy-scikit-learn-on-mac-os-x-for-data-miners/
+https://pythonhosted.org/nolearn/
+http://www.dabapps.com/blog/introduction-to-pip-and-virtualenv-python/
+http://www.pyimagesearch.com/2015/06/15/install-opencv-3-0-and-python-2-7-on-osx/
+
+# This one was the most important
+http://www.learnopencv.com/install-opencv-3-on-yosemite-osx-10-10-x/
+"""
+
+# make sure to use homebrew version of python
+$ brew install python
+
+$ sudo easy_install pip
+$ sudo pip install scikit-learn
+$ sudo pip install virtualenv
+
+# Run this command in the project directory
+# We install nolearn into this env/
+$ virtualenv env
+$ env/bin/pip install -r https://raw.githubusercontent.com/dnouri/nolearn/master/requirements.txt
+$ env/bin/pip install git+https://github.com/dnouri/nolearn.git@master#egg=nolearn==0.7.git
+
+# To enter python shell
+$ env/bin/python
+# or use:
+$ source env/bin/activate
+$ python
+
+"""
+Add to .bash_profile
+export PATH=/usr/local/bin:$PATH
+	# check with:
+	$ which python
+source /usr/local/bin/virtualenvwrapper.sh
+"""
+
+# Making virtual environment isn't necessary
+#	$ mkvirtualenv cv
+
+# Remember, we have activated virtual environment held in env/.
+# So now simply use "pip" not "sudo pip" to install relevant stuff for this env.
+$ pip install virtualenv virtualenvwrapper
+$ brew install cmake pkg-config		# May not be necessary
+$ brew install jpeg libpng libtiff openexr	# May not be necessary
+$ brew install eigen tbb			# May not be necessary
+
+$ brew tap homebrew/science
+$ brew install opencv3 --with-contrib
+# Add following to .bash_profile ( or run each time in Terminal)
+# export DYLD_FALLBACK_LIBRARY_PATH=/usr/local/Cellar/opencv3/3.1.0/lib:$DYLD_FALLBACK_LIBRARY_PATH 
+# export PYTHONPATH=/usr/local/Cellar/opencv3/3.1.0/lib/python2.7/site-packages:$PYTHONPATH
+
+
+# If everything worked so far, test this with:
+$ env/bin/python -c "import cv2; cv2.__version__"
+
+#
+##
+#### If previous command results in no errors, then STOP HERE.
+#### The next commands install OpenCV from source. Couldn't figure it out.
+##
+#
+
+
+"""
+------------------------------------------------------------
+$ cd ~
+$ git clone https://github.com/Itseez/opencv.git
+$ cd opencv
+$ git checkout 3.0.0
+
+$ cd ~
+$ git clone https://github.com/Itseez/opencv_contrib
+$ cd opencv_contrib
+$ git checkout 3.0.0
+
+$ cd ~/opencv
+$ mkdir build
+$ cd build
+$ cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local \
+	-D PYTHON2_PACKAGES_PATH=~/.virtualenvs/cv/lib/python2.7/site-packages \
+	-D PYTHON2_LIBRARY=/usr/local/Cellar/python/2.7.11/Frameworks/Python.framework/Versions/2.7/bin \
+	-D PYTHON2_INCLUDE_DIR=/usr/local/Frameworks/Python.framework/Headers \
+	-D INSTALL_C_EXAMPLES=ON -D INSTALL_PYTHON_EXAMPLES=ON \
+	-D BUILD_EXAMPLES=ON \
+	-D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib/modules ..
+
+# However many cores the computer has
+$ make -j4
+$ make install
+# or sudo make install
+
+# Sanity Check
+$ cd ~/.virtualenvs/cv/lib/python2.7/site-packages/
+$ ls -l cv2.so
+# --> -rwxr-xr-x  1 adrian  staff  2013052 Jun  5 15:20 cv2.so
+# Also check:	build/lib/cv2.so
+
+# Verify:
+$ python
+>> import cv2
+>> cv2.__version__
+'3.0.0'
+
+------------------------------------------------------------
+"""
