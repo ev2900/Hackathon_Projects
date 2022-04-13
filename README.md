@@ -1,2 +1,2 @@
-# Hackathon_Projects
-Past Hackathon Project
+# Hackathon Projects
+Repo of past hackathon project
