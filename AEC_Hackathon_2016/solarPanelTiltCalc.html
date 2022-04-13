@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Geocoding service</title>
+  </head>
+  <body>
+    <div id="floating-panel">
+      <input id="Street" type="textbox" value="4960 S 12th St">
+      <input id="City" type="textbox" value="Philadelphia">
+      <input id="State" type="textbox" value="PA">
+      <input id="submit" type="button" value="Submit">
+    </div>
+    <script>
+      function init() {
+        var geocoder = new google.maps.Geocoder();
+        document.getElementById('submit').addEventListener('click', function() {
+          geocodeAddress(geocoder);
+        });
+      }
+
+      function geocodeAddress(geocoder, resultsMap) {
+        street=document.getElementById('Street').value;
+        city=document.getElementById('City').value;
+        state=document.getElementById('State').value;
+        street = street + ' ';
+        city = city + ', '
+        address = street+city+state;
+        //var address = 'Philadelphia, PA'
+        geocoder.geocode({'address': address}, function(results, status) {
+          if (status === google.maps.GeocoderStatus.OK) {
+            lat = results[0].geometry.location.lat();
+            lng = results[0].geometry.location.lng();
+            //alert(lng);
+          } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+          }
+        });
+        //alert('Stopped before computeTilt()')
+        if(lat<=25){
+          tilt = lat*.87;
+          alert(tilt);
+        }
+        if(lat>25 && lat<=50){
+          tilt = (lat*.76) + 3.1
+          alert(tilt)
+        }
+        else{
+          alert('Address not supported')
+        }
+      }
+
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFNHzfqtQVlRea90IeGYCcMRnGPmNC20c&signed_in=true&callback=init">
+    </script>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+VAR:  The unit for reactive power (volt-ampere reactive)
+W:  "Real Power" or "Active Power" in Watts
+VA:  Unit for Apparent Power and Complex Power (volt-ampere)
+
+Reactive power is important because it causes heating of the conductors and wastes energy even though it does not work on the load.

@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="https://s3-us-west-2.amazonaws.com/penapps/pineapple+(1).jpg">
+	
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/component.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/animated-bg.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+  	
+	<title> Predicting Diabetes</title>
+
+
+</head>
+
+<body>
+	
+	<div id="large-header" class="large-header">
+		
+        <h1 class="main-title"> <span style="color:#FF913F; font-size:100%"> Prescriptive Analytics </span> <br><br> Machine Learning + Diabetes = Health </h1>
+	</div>
+
+<!-- What is machine learning? -->
+
+	<main id="more" class="cd-main-content">
+        
+        <!--What is Machine Learning -->
+        <div class="cd-container">
+
+			<h2 style="color: #7e7e7e; font-size: 35px" id="our_story"> What is machine learning (ML)?  </h2>
+
+			         <p>
+
+                        <strong id="docs-internal-guid-e16e456d-bdeb-2bef-e750-f1145acc0cbf">
+                       Machine learning is the process of predicting the future based on what happened in the past. With respect to data, machine learning uses a data set which has a number of instances and attributes. Attributes describe instances. For example, if we had a data set which described a population of people, each person would be an instance and descriptions such as height, weight, age and blood pressure would be attributes. The goal of machine learning is to build a statistical model which determines the outcome of a specific unknown attribute based on the values of known attributes. For example, machine learning algorithms could be applied to build a model which could predict if a person has diabetes (unknown attribute) based on their height, weight and age (known attributes). In the context of this example and in general, machine learning gains its predictive abilities by building statistical models from past data sets (training data set) where the outcome (a person diabetic state) is known. It then leverages this power to look at new instances (people not in training date set) and the values of their known attributes (height, weight and age) to determine the result of an unknown attribute (diabetic state). The accuracy and precision of models built via. machine learning can be determined by using part of the past data, which was not used in building the model (test data set), to determine the number of times the model correctly determined the value of a predicted attribute. It is important to evaluate accuracy. Machine learning is not a silver bullet for statistical modeling. Some data sets are not 'learnable' to an acceptable level and consequently machine learning may not always be the best method of making predictions.  
+
+			         </strong></p>
+                
+        	</div>
+
+        <!-- How we used Machine Learning -->	
+        <<div class="cd-container" main id="team">
+			
+			<h2 style="color: #7e7e7e; font-size: 35px">  What ML algorithm did we use?</h2>
+			<p>  </p>
+			
+            <!--Zero R-->
+			<div class="cd-container-people">
+				<div class="cd-container-people-clmn-1">
+		          
+                    <a href="http://www.saedsayad.com/zeror.htm" style="color: #7e7e7e;">
+
+					    <div class="cd-container-people-info">
+					        <h2> ZeroR </h2>
+                                                      			        
+                            <p style="font-size:20px"> ZeroR establishes a base line. The algorithm has near no predicitve power. The model generated from zeroR is a single rule which states, always guess the most popular choice. Applying this to predicting diabetes oneR evalutes the training data and notices that in the training data more people did not have diabetes compared to people who do. Next looking at a new instance who's diabetic state is unkown oneR guesses the most popular choice in the past and always classifies that individual as not having diabetes. <br><br> </p> 
+					    </div>
+
+                    </a>
+
+				</div>
+
+                <!--OneR-->
+				<div class="cd-container-people-clmn-2">
+					<div class="cd-container-people-info">
+					
+                      <a href="http://www.saedsayad.com/oner.htm" style="color: #7e7e7e;">
+
+					    <h2> OneR </h2>
+                        
+					    <p style="font-size:20px"> OneR is a simple machine learning algorithm. OneR classifies an unkown instance based on the value of a single attribute. OneR generates a rule for classification by making many rules - one for each attribute - and testing all of the rules. Ultimately picking the rule with the lowest classification error as the best overall rule. Since oneR only uses the value of a single attribute for classification it works well in data sets where specific attrubtes have more decission making power than others. <br><br><br><br></p>
+					</div>
+
+                    </a>
+
+				</div>
+
+                <!-- C4.5 -->
+				<div class="cd-container-people-clmn-3">
+				  	
+                    <a href="http://www.saedsayad.com/decision_tree.htm" style="color: #7e7e7e;">
+
+					<div class="cd-container-people-info">
+					    
+					    <h2> C4.5 </h2>
+                                                
+					    <p style="font-size:20px">C4.5 is a decision tree building algorithm based on a top down recursive divide and conquer strategy. The algorithm uses a heuristic approach based on information gains, to determine which attributes to split on. Decision tress are an often easy to understand method of classification. C4.5 will generate a physical tree which splits on different attribute and produces a path for the possible values of different attribute. Following the tree to a branch will result in classification. <br><br><br></p>
+					</div>
+
+                    </a>
+
+				</div>
+			</div>
+
+            <!--Space Between two gropings-->
+            <br> <br>
+
+            <!--Naive Bayes -->
+            <div class="cd-container-people">
+				<div class="cd-container-people-clmn-1">
+                
+                    <a href=" http://www.saedsayad.com/naive_bayesian.htm" style="color: #7e7e7e;">
+
+				    <div class="cd-container-people-info">
+				        
+					    <h2> Naive Bayes </h2>
+                        
+					    <p style="font-size:20px"> Naive Bayes is a simple probabilistic machine learning algorithm. From a higher level it is the opposite of the OneR algorithm which assumes that one attribute has the majority of the decision making power. Naive Bayes weighs each attribute equally when predicting the class of a new instance and when building a model from past instances. A Naive Bayes model determines the classification of a new instance by determining the probability that each attribute belongs to one class and then multiplies these probabilities together, determing the overall likeliness that the instance belongs to a specific class. </p>
+					</div>
+
+                    </a>
+
+				</div>
+
+                <!-- Bagging -->
+				<div class="cd-container-people-clmn-2">
+				
+					<div class="cd-container-people-info">
+				
+                    <a href="https://en.wikipedia.org/wiki/Bootstrap_aggregating" style="color: #7e7e7e;">
+
+					    <h2> Bagging </h2>
+                                                
+					    <p style="font-size:20px"> Bagging or bootstraping is designed to improve the stability and accuracy of machine learning algorithms. Bagging runs an algorithum multiple times on different splits of a training data set. The models are then combined by voting. Bagging is a very effective method for unstable models. Models such as decision trees can often change significantly each time the algorithm is rerun. In situations such as these where the model is unstable bagging helps mitigate the effects by running the algorithm many times and then combining them. <br><br><br> </p>
+					</div>
+
+                </a>
+
+				</div>
+
+                <!-- Bosting -->
+				<div class="cd-container-people-clmn-3">
+				
+                 <a href="https://en.wikipedia.org/wiki/Boosting_(machine_learning)" style="color: #7e7e7e;">
+
+					<div class="cd-container-people-info">
+					    
+						<h2> Boosting </h2>
+                        
+					    <p style="font-size:20px"> Boosting is designed to convert weak learners into strong ones. Boosting  allows the performance of previous models to influence the building of the next model. More specificly boosting builds the next model from the missclassfied instances of the previous model. By this method the algorithum targets misclassifed instances and boosts its accuracy. Boosting an algothium can strengthen the model. <br><br><br><br><br><br> </p>
+					</div>
+
+                </a>
+
+                </div>             
+			</div>
+
+		</div>
+       
+
+<!-- What algorithum did we use? -->
+<<div class="cd-container" main id="team">
+            
+            <h2 style="color: #7e7e7e; font-size: 35px">  Did the ML work? </h2>
+            <p>  </p>
+            
+            <!--Zero R-->
+            <div class="cd-container-people">
+                <div class="cd-container-people-clmn-1">
+                        <div class="cd-container-people-info">
+                            <h2> ZeroR </h2>
+                                                                        
+                            <p style="font-size:20px"> Correct Classification: 59.6% <br><br>
+
+                                ZeroR establishes the base line for the other methods to be compared to. Looking at a frequency table of the training data not having diabetes was more popular compared to having diabetes. Consequently the zeroR rule operated under, while evaluting the training data set (via. 10 fold cross validation) is to always guess that the instance in question does not have diabetes. Always guessing the more popular choice gave a correct classification 59.6% of the time.
+
+                                <br><br><br>
+
+                            </p> 
+                        </div>
+                </div>
+
+                <!--OneR-->
+                <div class="cd-container-people-clmn-2">
+                    <div class="cd-container-people-info">
+                        
+                        <h2> OneR </h2>
+                        
+                        <p style="font-size:20px"> Correct Classification: 71.5% <br><br>
+
+                            Plasma Glucose Concentration <br>
+                                &nbsp; &nbsp; < 114.5 -> Health       <br>
+                                &nbsp; &nbsp; < 115.5 -> Diabetes     <br>
+                                &nbsp; &nbsp; < 127.5 -> Health       <br>
+                                &nbsp; &nbsp; < 128.5 -> Diabetes     <br>
+                                &nbsp; &nbsp; < 133.5 ->Health        <br>
+                                &nbsp; &nbsp; < 135.5 -> Diabetes     <br>
+                                &nbsp; &nbsp; < 143.5 ->Health        <br>
+                                &nbsp; &nbsp; < 152.5 -> Diabetes     <br>
+                                &nbsp; &nbsp; < 154.5 -> Health       <br>
+                                &nbsp; &nbsp; >= 154.5 -> Diabetes    <br><br>
+
+                                OneR produced a single rule based on the value of a plasma glucose concentration test. 
+                        </p>
+                    </div>
+                </div>
+
+                <!-- C4.5 -->
+                <div class="cd-container-people-clmn-3">
+                    
+                    <div class="cd-container-people-info">
+                        
+                        <h2> C4.5 </h2>
+
+
+                		<p style="font-size:20px">
+
+                        	Correct Classification: 73.8% 
+                            <a href="https://s3-us-west-2.amazonaws.com/penapps/image.png"/> <br> Decision Tree <br><br> </a>
+
+                            C4.5 generated a decision tree for determining if an individual has diabetes or not. The decision tree splits on a number of attributes and bridges the gap between treating all attributes with equal decision making power and treating one attribute with all the decision making power. By utilizing some but not all of the attributes it models the reality of different attributes having different degrees of influence. <br><br><br>   
+
+                		</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--Space Between two gropings-->
+            <br> <br>
+
+            <!--Naive Bayes -->
+            <div class="cd-container-people">
+                <div class="cd-container-people-clmn-1">
+                
+                    <div class="cd-container-people-info">
+                        
+                        <h2> Naive Bayes </h2>
+                        
+                        <p style="font-size:20px">
+                			Correct Classification: 76.3%
+                            
+                            <br><br>
+
+                            The final product of the naive bayes classifier was a weight for each attribute in the data set. A weight which could be used to deterime the probability that an instance would be classified as either having diabetes or not. The naive bayes classifier worked the best of all of the classifiers tested. This is likely a reflection of the atributed equality in influencing the classifciation of an instance. <br><br> 
+
+                		</p>
+
+                    </div>
+                </div>
+
+                <!-- Bagging -->
+                <div class="cd-container-people-clmn-2">
+                
+                    <div class="cd-container-people-info">
+                    
+                    <h2> Bagging </h2>
+
+                    <p style="font-size:20px">
+                		Correct Classification: 75.4% 
+
+                        <br><br>
+
+                        Bagging was applied to C4.5 to see if bagging could imporve the accuracy. Bagging the algorithum provided only a slight increase in accuracy. Illistrating that bagging was not very effective as the model was not particaullry unstable. Having many iterations of the model run on and then combined resulted in an only slight increase in accuracy imply that there was likely litte variastion from model to model. <br><br>
+
+                	</p>                                                
+                        
+                    </div>
+                </div>
+
+                <!-- Bosting -->
+                <div class="cd-container-people-clmn-3">
+                
+                    <div class="cd-container-people-info">
+                        
+                        <h2> Boosting </h2>
+                        
+                    	<p style="font-size:20px">
+                		
+                			Correct Classification: 74.3%
+
+                            <br><br>
+
+                            Boosting was applied to C4.5 in an attempt to strenghten the learning ability of the algotimhu. Boosting resulted in almost no increase in accuracy. Even using the feed back from the previous build of each model and targeting the miss classifed instances algotihum was imporved little. This is likely tied to small size of the data set. Even targeting the missclassified instances specifclly they still could not be classified. 
+
+                		</p>
+
+                    </div>
+                </div>             
+            </div>
+
+        </div>
+	
+<!-- -->
+
+		<div class="cd-container" main id="works">
+			
+			<h2 style="color: #7e7e7e; font-size: 35px"> How did we do it? </h2>
+            <br>
+
+            <!--Big Data Word Cloud-->
+			<!-- <img src= img/big_data_word_map.png width="850"> -->
+
+			<br><br><br><br><br>
+
+			<h2 style="color: #7e7e7e; font-size: 75px"> <span style="color: #FF913F"> <a href="https://archive.ics.uci.edu/ml/datasets/Pima+Indians+Diabetes" style="color: #FF913F"> Data </a> + </span>  <span style="color: #FF913F"> </span> <img src="https://s3-us-west-2.amazonaws.com/nittanydatalabs/heart.png"> <span style="color: #FF913F"> =  </span> Project </h2>
+			
+			<br><br><br><br><br>
+            
+            <!-- Then Join the Team -->
+            <br>
+            <h2 style="color: #7e7e7e; font-size: 35px"> and with <br><br><br> <a href="https://weka.waikato.ac.nz/explorer" style="color: #FF913F"> Weka </a>, <a href="https://www.python.org/" style="color: #FF913F"> Python </a>, <a href="https://aws.amazon.com/" style="color: #FF913F"> AWS </a>, a <a href="http://shout.setfive.com/2013/04/05/amazon-aws-ec2-lamp-quickstart-guide-5-steps-in-10-minutes/" style="color: #FF913F"> LAMP Stack </a> and <a href="https://github.com/ev2900/Penn_Apps" style="color: #FF913F"> GitHub </a> </h2>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5wGdqrTcgLdOPzMbASsbiHkloxc6v2rE"></script>
+
+		<script src="js/TweenLite.min.js"></script>
+		<script src="js/EasePack.min.js"></script>
+		<script src="js/rAF.js"></script>
+		<script src="js/demo-1.js"></script>
+
+<footer>
+
+    <div>
+        <br><br><br><br><br>
+        Contact: hello@intellglu.com
+    </div>
+
+</footer>
+
+
+<!-- Script for smooth scrolling -->
+<script>
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+</script>
+
+</body>
+</html>

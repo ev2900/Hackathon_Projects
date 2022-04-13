@@ -1,0 +1,67 @@
+/*!
+ * Start Bootstrap - Full HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+.navbar-brand {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	text-align: center;	
+	margin: auto;
+	line-height: 100%;
+	font-size: 300%;
+	padding-top: 5px;
+	 
+ }
+
+.navbar-default{
+	margin-top: 15px;
+	margin-left: -8px;
+	margin-right: 49px;
+	height: 80px;
+	border-radius: 10px;
+	background-color: #fff;
+	color: black;
+	border-color: #fff; 
+
+}
+
+body {
+	margin-left: 10px;
+	margin-right: 10px;
+
+}
+
+h1 {
+
+	font-size: 25px;
+}
+
+.jumbotron-custom {
+
+	background-color: #fff; 
+	border-style:solid; 
+	border-color: #5C9B19;
+	border-width: 1px;
+
+}
+
+li {
+
+	padding-top: 3.5px;
+	font-size: 14px;
+
+}
+
+h3 {
+
+	color: #8E4585;
+}
+
+* {
+
+	color:  #5C9B19; 
+
+}
